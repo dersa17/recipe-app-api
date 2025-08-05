@@ -12,9 +12,9 @@ const PORT =  ENV.PORT;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-// app.get("/api/health", (req, res) => {
-//     res.status(200).json({status: true})
-// })
+app.get("/api/health", (req, res) => {
+    res.status(200).json({status: true})
+})
 
 app.post("/api/favorites", async (req, res) => {
     try {
